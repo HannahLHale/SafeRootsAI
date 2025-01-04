@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeRoots AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>🌱 SafeRoots AI</h1>
+    <nav>
+      <a href="#vault">Password Vault</a>
+      <a href="#generator">Generator</a>
+      <a href="#education">Learn</a>
+      <a href="#settings">Settings</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="welcome">
+      <h2>Welcome to SafeRoots AI!</h2>
+      <p>Your journey to secure digital roots starts here. 🌟</p>
+    </section>
+
+    <section id="features">
+      <div class="feature">
+        <h3>🔒 Password Vault</h3>
+        <p>Save, manage, and secure all your passwords in one place.</p>
+        <button>Go to Vault</button>
+      </div>
+      <div class="feature">
+        <h3>🧠 Password Generator</h3>
+        <p>Get AI-crafted passwords that are tough to crack!</p>
+        <button>Generate Now</button>
+      </div>
+      <div class="feature">
+        <h3>📚 Learn Cybersecurity</h3>
+        <p>Explore tips and tricks for staying safe online.</p>
+        <button>Start Learning</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🌱 SafeRoots AI | Building a safer digital world. 💚</p>
+  </footer>
+</body>
+</html>
