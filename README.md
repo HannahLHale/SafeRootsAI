@@ -18,3 +18,9 @@ Ever thought passwords were just... too boring to think about? Well, SafeRoots A
 Prerequisites:
 Python 3.9+ installed.
 Basic knowledge of computers (but don’t worry, we’re here to help!).
+
+🎉 Why SafeRoots?
+Cybersecurity can feel overwhelming, but it doesn’t have to be. SafeRoots AI isn’t just a tool—it’s your companion for growing safer digital habits. Whether you’re new to tech or a seasoned pro, we’re here to help you plant the seeds of secure online behavior.
+
+🌟 Our Mission
+In rural communities, the digital divide is real. SafeRoots AI is about more than passwords—it’s about empowerment. By teaching people to protect their digital lives, we’re nurturing a future where everyone has the tools to thrive online.
