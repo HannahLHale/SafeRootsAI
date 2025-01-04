@@ -1,19 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SafeRoots AI</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+<script src="script.js"> </script>
 <body>
   <header class="navbar">
     <h1>🌱 SafeRoots AI</h1>
     <nav>
-      <a href="#vault">Password Vault</a>
+      <a href="#strengthTester">Strength Tester</a>
       <a href="#generator">Generator</a>
       <a href="#education">Learn</a>
-      <a href="#settings">Settings</a>
+      <a href="#about">About</a>
     </nav>
   </header>
 
@@ -23,12 +26,15 @@
       <p>Your journey to secure digital roots starts here. 🌟</p>
     </section>
 
-    <section id="features">
-      <div class="feature">
-        <h3>🔒 Password Vault</h3>
-        <p>Save, manage, and secure all your passwords in one place.</p>
-        <button>Go to Vault</button>
-      </div>
+  
+    <section id="strength-tester">
+        <h2>🔍 Test Your Password Strength</h2>
+        <p>Enter a potential sample password that follows your usual password practices below. We'll tell you how strong it is! </p>
+        <input type="password" id="password-input" placeholder="Your sample password..." />
+        <button onclick="checkPasswordStrength()">Test Strength</button>
+        <div id="strength-result"></div>
+    </section>
+
       <div class="feature">
         <h3>🧠 Password Generator</h3>
         <p>Get AI-crafted passwords that are tough to crack!</p>
@@ -40,6 +46,7 @@
         <button>Start Learning</button>
       </div>
     </section>
+    
   </main>
 
   <footer>

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anaheim');
+body {
+    min-height: 100%;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #b2b296;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.navbar {
+  background-color: #3a6d4f;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+}
+#strength-tester {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#strength-tester input {
+  padding: 0.5rem;
+  width: 60%;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+#strength-tester button {
+  background-color: #3a6d4f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#strength-tester button:hover {
+  background-color: #2c513b;
+}
+
+#strength-result {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#features {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature {
+  background-color: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  width: 250px;
+}
+
+.feature h3 {
+  color: #3a6d4f;
+}
+
+.feature button {
+  background-color: #3a6d4f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feature button:hover {
+  background-color: #2c513b;
+}
+
+footer {
+  background-color: #3a6d4f;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
