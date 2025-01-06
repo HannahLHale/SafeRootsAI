@@ -54,3 +54,18 @@ function checkPasswordStrength() {
     resultDiv.innerHTML = `<span style="color: red;">🔴 Weak Password! Consider these tips:</span><ul>${tips.map(tip => `<li>${tip}</li>`).join('')}</ul>`;
   }
 }
+function generatePassword() {
+  const length = 16; // Desired password length
+  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}<>?";
+  let password = "";
+
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    password += charset[randomIndex];
+  }
+
+  // Display the generated password
+  const passwordDiv = document.getElementById("generated-password");
+  passwordDiv.innerHTML = `<span style="color: green;">Your Strong Password: </span> <code>${password}</code>`;
+}
+

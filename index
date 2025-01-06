@@ -43,7 +43,8 @@
     <section id="password-generator">
       <h2>🔑 Generate a Password</h2>
       <p>Generate an AI-crafted password that is tough to crack to keep your roots secure!</p>
-        <button>Generate Now!</button>
+      <button onclick="generatePassword()">Generate Password!</button>
+      <div id="generated-password"></div>
     </section>
 
     <section id="learn">
