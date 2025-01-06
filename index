@@ -45,6 +45,7 @@
       <p>Generate an AI-crafted password that is tough to crack to keep your roots secure!</p>
       <button onclick="generatePassword()">Generate Password!</button>
       <div id="generated-password"></div>
+      <button id="copy-button" style="display: none;" onclick="copyPassword()">Copy to Clipboard</button>
     </section>
 
     <section id="learn">

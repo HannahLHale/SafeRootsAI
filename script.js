@@ -67,5 +67,36 @@ function generatePassword() {
   // Display the generated password
   const passwordDiv = document.getElementById("generated-password");
   passwordDiv.innerHTML = `<span style="color: green;">Your Strong Password: </span> <code>${password}</code>`;
+
+  // Show the copy button
+  const copyButton = document.getElementById("copy-button");
+  copyButton.style.display = "inline-block"; // Make the button visible
 }
+
+function copyPassword() {
+  const passwordDiv = document.getElementById("generated-password");
+  const password = passwordDiv.textContent; // Get the password text
+  const copyButton = document.getElementById("copy-button");
+
+  if (password) {
+    navigator.clipboard.writeText(password)
+      .then(() => {
+        // Change button text to "Copied!"
+        copyButton.textContent = "Copied!";
+        
+        // Reset the button text after 2 seconds
+        setTimeout(() => {
+          copyButton.textContent = "Copy to Clipboard";
+        }, 2000);
+      })
+      .catch(err => {
+        console.error("Error copying password: ", err);
+        alert("Failed to copy the password. Please try again.");
+      });
+  } else {
+    alert("No password to copy! Generate one first.");
+  }
+}
+
+
 
