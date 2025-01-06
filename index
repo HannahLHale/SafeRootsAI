@@ -40,13 +40,20 @@
         <button onclick="checkPasswordStrength()">Test Strength</button>
         <div id="strength-result"></div>
     </section>
-    <section id="password-generator">
-      <h2>🔑 Generate a Password</h2>
-      <p>Generate an AI-crafted password that is tough to crack to keep your roots secure!</p>
-      <button onclick="generatePassword()">Generate Password!</button>
-      <div id="generated-password"></div>
-      <button id="copy-button" style="display: none;" onclick="copyPassword()">Copy to Clipboard</button>
-    </section>
+   <section id="password-generator">
+  <h2>🔑 Generate a Password</h2>
+  <p>Generate an AI-crafted password that is tough to crack to keep your roots secure!</p>
+  
+  <!-- Button to generate the password -->
+  <button onclick="generatePassword()">Generate Password!</button>
+  
+  <!-- Div to display the generated password -->
+  <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
+  
+  <!-- Button to copy the generated password -->
+  <button id="copy-button" style="display: none; margin-top: 10px;" onclick="copyPassword()">Copy to Clipboard</button>
+</section>
+
 
     <section id="learn">
         <h2>📚 Learn Cybersecurity</h2>
