@@ -66,7 +66,7 @@ function generatePassword() {
 
   // Display the generated password
   const passwordDiv = document.getElementById("generated-password");
-  passwordDiv.innerHTML = `<span style="color: green;">Your Strong Password: </span> <code>${password}</code>`;
+  passwordDiv.innerHTML = `<span style="color: green;">Your Strong Password: </span> <code id="password-text">${password}</code>`;
 
   // Show the copy button
   const copyButton = document.getElementById("copy-button");
@@ -74,8 +74,8 @@ function generatePassword() {
 }
 
 function copyPassword() {
-  const passwordDiv = document.getElementById("generated-password");
-  const password = passwordDiv.textContent; // Get the password text
+  const passwordSpan = document.getElementById("password-text"); // Get only the password text
+  const password = passwordSpan.textContent; // Extract the text inside the <code> tag
   const copyButton = document.getElementById("copy-button");
 
   if (password) {
@@ -97,6 +97,3 @@ function copyPassword() {
     alert("No password to copy! Generate one first.");
   }
 }
-
-
-
