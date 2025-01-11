@@ -11,14 +11,14 @@
 <script src="script.js"> </script>
 <body>
   <header class="navbar">
-    <h1>🌱 SafeRoots AI</h1>
-    <section id="mission-statement">
-      
+    <h1>SafeRoots AI</h1>
+    <section>
+      <img src="giphy.gif" width="109" 
+     height="64" style="position:relative;">
     </section>
   </header>
  
   
-
   <main>
     <section id="welcome">
       <h1>Welcome to SafeRoots AI!</h1>
