@@ -54,13 +54,53 @@
   <button id="copy-button" style="display: none; margin-top: 10px;" onclick="copyPassword()">Copy to Clipboard</button>
 </section>
 
-
 <section id="learn">
   <h2>📚 Learn Cybersecurity</h2>
   <p>Explore tips and tricks for staying safe online.</p>
-  <button onclick= Start Learning</button>
-  </section>
-    
+  <button id="learn-button" onclick="showGame()">Start Learning</button>
+</section>
+
+<section id="interactive-game" style="display: none;">
+  <div class="game-container">
+    <h2>🛡️ Password Hero: Save the Vault!</h2>
+    <p id="task">🧩 Strengthen this password: <span id="weak-password" class="highlight">dog1234</span></p>
+    <input type="text" id="user-password" placeholder="Type your fix here">
+    <button onclick="checkPassword()">🚀 Submit</button>
+
+    <div id="strength-bar-container">
+      <div id="strength-bar"></div>
+    </div>
+    <p id="feedback"></p>
+    <p id="encouragement" style="display: none;">🌟 Great job! You're on your way to becoming a Password Hero!</p>
+  </div>
+</section>
+
+<section id="infographic-area" style="display: none;">
+  <div class="infographic-container">
+    <h2>🔐 Cybersecurity Essentials</h2>
+    <div class="infographic">
+      <div class="infographic-item">
+        <h3>🔒 Use Strong Passwords</h3>
+        <p>Avoid common phrases and include uppercase, numbers, and symbols.</p>
+      </div>
+      <div class="infographic-item">
+        <h3>📧 Beware of Phishing</h3>
+        <p>Don’t click on suspicious links or share personal info via email.</p>
+      </div>
+      <div class="infographic-item">
+        <h3>🛡️ Enable Two-Factor Authentication</h3>
+        <p>Double your protection by adding a second verification step.</p>
+      </div>
+      <div class="infographic-item">
+        <h3>🖥️ Keep Software Updated</h3>
+        <p>Install updates regularly to patch security vulnerabilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
   </main>
 
   <footer>

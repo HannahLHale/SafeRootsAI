@@ -97,3 +97,53 @@ function copyPassword() {
     alert("No password to copy! Generate one first.");
   }
 }
+// Function to show the game section
+function showGame() {
+  console.log("showGame function triggered!"); // Debugging log
+
+  // Get the "Learn" section and the "Interactive Game" section
+  const learnSection = document.getElementById("learn");
+  const gameSection = document.getElementById("interactive-game");
+  const infographicArea = document.getElementById("infographic-area");
+
+  if (learnSection && gameSection && infographicArea) {
+    learnSection.style.display = "none";
+
+    // Add the "show" class to the game section to trigger the fade-in effect
+    gameSection.style.display = "block";
+    setTimeout(() => {
+      gameSection.classList.add("show");
+    }, 50); 
+    infographicArea.style.display = "block";
+  }
+}
+
+// Function to check password strength (unchanged from your code)
+function checkPassword() {
+  const userPassword = document.getElementById("user-password").value;
+  const feedback = document.getElementById("feedback");
+  const strengthBar = document.getElementById("strength-bar");
+  const encouragement = document.getElementById("encouragement");
+
+  let score = 0;
+
+  if (userPassword.length >= 12) score += 1; // Length
+  if (/[A-Z]/.test(userPassword)) score += 1; // Uppercase
+  if (/[0-9]/.test(userPassword)) score += 1; // Numbers
+  if (/[!@#$%^&*]/.test(userPassword)) score += 1; // Symbols
+
+  // Update feedback
+  if (score === 4) {
+    feedback.textContent = "🌟 Strong password! You're a Password Hero!";
+    feedback.style.color = "green";
+    encouragement.style.display = "block"; // Show encouragement
+  } else {
+    feedback.textContent = "❌ Keep improving! Add more security elements.";
+    feedback.style.color = "red";
+    encouragement.style.display = "none"; // Hide encouragement
+  }
+
+  // Update strength bar
+  strengthBar.style.width = (score / 4) * 100 + "%";
+  strengthBar.style.backgroundColor = score === 4 ? "green" : "orange";
+}
