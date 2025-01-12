@@ -55,7 +55,7 @@ function checkPasswordStrength() {
   }
 }
 function generatePassword() {
-  const length = 17; 
+  const length = 16; 
   const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}<>?-/|";
   let password = "";
 
@@ -65,7 +65,10 @@ function generatePassword() {
   }
 
   const passwordDiv = document.getElementById("generated-password");
-  passwordDiv.innerHTML = `<span style="color: green;">An Example of a Strong Password: </span> <code id="password-text">${password}</code>`;
+  if (passwordDiv) {
+    passwordDiv.innerHTML = `<span style="color: green;">An Example of a Strong Password: </span> 
+      <code id="password-text">${password}</code>`;
+  } 
 }
 
 function showGame() {
