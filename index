@@ -17,8 +17,7 @@
      height="64" style="position:relative;">
     </section>
   </header>
- 
-  
+
   <main>
     <section id="welcome">
       <h1>Welcome to SafeRoots AI!</h1>
@@ -53,20 +52,14 @@
    <section id="password-generator">
   <h2>🔑 Generate a Password</h2>
   <p>Generate an AI-crafted password that is tough to crack to keep your roots secure!</p>
-  
-  <!-- Button to generate the password -->
   <button onclick="generatePassword()">Generate Password!</button>
-  
-  <!-- Div to display the generated password -->
   <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
-  
-  <!-- Button to copy the generated password -->
   <button id="copy-button" style="display: none; margin-top: 10px;" onclick="copyPassword()">Copy to Clipboard</button>
 </section>
 
 <section id="learn">
   <h2>📚 Learn Cybersecurity</h2>
-  <p>Explore tips and tricks for staying safe online.</p>
+  <p>Apply what you've learned in a fun mini game and learn some tips and tricks for staying safe online.</p>
   <button id="learn-button" onclick="showGame()">Start Learning</button>
 </section>
 
@@ -108,11 +101,7 @@
     </div>
   </div>
 </section>
-
-
-
   </main>
-
   <footer>
     <p>🌱 SafeRoots AI | Building a safer digital world. 💚</p>
   </footer>
