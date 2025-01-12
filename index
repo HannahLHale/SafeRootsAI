@@ -16,7 +16,7 @@
   </header>
 <main>
     <section id="welcome">
-      <h1><em>Your journey to secure digital roots starts here!🌟</em> </h1>
+      <h1><em>No matter where you're from, your journey to secure digital roots starts here!🌟</em> </h1>
     </section>
     <section id="mission">
     <style>
@@ -43,20 +43,20 @@
         <h2>🔍 Test Your Password Strength</h2>
         <p>Enter a potential sample password that follows your usual password practices below. We'll tell you how strong it is! </p>
         <input type="password" id="password-input" placeholder="Your sample password..." />
-        <button onclick="checkPasswordStrength()">Test Strength</button>
+        <button onclick="checkPasswordStrength()"><b>Test Strength</b></button>
         <div id="strength-result"></div>
     </section>
    <section id="password-generator">
   <h2>🔑 Generate a Password</h2>
   <p>Generate an AI-crafted example password that is tough to crack to keep your roots secure!</p>
-  <button onclick="generatePassword()">Generate Password</button>
+  <button onclick="generatePassword()"><b>Generate Password</b></button>
   <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
 </section>
 
 <section id="learn">
   <h2>📚 Learn Cybersecurity</h2>
   <p>Apply what you've learned in a fun mini-game and learn some tips and tricks for staying safe online.</p>
-  <button id="learn-button" onclick="showGame()">Start Learning</button>
+  <button id="learn-button" onclick="showGame()"><b>Start Learning</b></button>
 </section>
 
 <section id="interactive-game" style="display: none;">
