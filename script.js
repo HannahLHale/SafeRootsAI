@@ -100,7 +100,7 @@ function checkPassword() {
 
  
   if (score === 4) {
-    feedback.textContent = "🌟 Strong password! The user's information is secure. You're a Password Hero!";
+    feedback.textContent = "🌟 Strong password! The user's information is secure. You're a Password Hero!🌟";
     feedback.style.color = "green";
     encouragement.style.display = "block"; // Show encouragement
   } else {

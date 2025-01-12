@@ -11,7 +11,7 @@
 <script src="script.js"> </script>
   <header class="navbar">
     <h1>SafeRoots AI</h1>
-      <img src="giphy.gif" width="109" 
+      <img src="plantgiphy.gif" width="109" 
      height="64" style="position:relative;">
   </header>
 <main>
@@ -61,6 +61,7 @@
 <section id="interactive-game" style="display: none;">
   <div class="game-container">
     <h2>🛡️ Password Hero: Save the Vault!</h2>
+     <img src="hacker.gif" width="150" height="120" style:"position:relative;">
     <p> ⚠️Uh oh! A user's information is at risk because their password to their digital vault was easily guessed by a scary hacker!⚠️</p>
     <p id="task">🧩 Based on what you've learned, hurry and secure the vault by strengthening their weak password: <span id="weak-password" class="highlight">dog1234</span></p>
     <input type="text" id="user-password" placeholder="Type your fix here">
@@ -70,7 +71,7 @@
       <div id="strength-bar"></div>
     </div>
     <p id="feedback"></p>
-    <p id="encouragement" style="display: none;">🏆🏆🏆</p>
+    <p id="encouragement" style="display: none;"> <img src="giphySuperhero.gif" width="190" height="150"></p>
   </div>
 </section>
 
