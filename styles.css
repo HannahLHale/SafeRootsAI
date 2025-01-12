@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anaheim');
+
 body {
     min-height: 100%;
     font-family: 'Lexend', sans-serif;
@@ -19,6 +20,35 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.wrapper.four {
+    font-size: 20px;
+    font-family: "Lexend", sans-serif;
+}
+.four .type{
+    width: auto;
+    margin: auto;
+}
+.four h2 {
+    text-align: center;
+    padding-left: 1.5rem;
+    width: 16.5ch;
+    border-right: 2px solid black;
+    margin: 2rem ;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(13, end), blink-caret 0.5s step-end infinite alternate;
+}
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
 
 main {
   padding: 2rem;
@@ -171,7 +201,7 @@ main {
 }
 
 button {
-  background-color: #5cb85c; /* Success green */
+  background-color: #5cb85c; 
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -183,7 +213,7 @@ button {
 }
 
 button:hover {
-  background-color: #4cae4c; /* Darker green on hover */
+  background-color: #4cae4c; 
 }
 
 #strength-bar-container {
@@ -223,7 +253,7 @@ button:hover {
 .infographic-container {
   text-align: center;
   padding: 2rem;
-  background-color: #f7fbfc; /* Soft background */
+  background-color: #f7fbfc; 
   border-radius: 15px;
   margin: 2rem auto;
   width: 80%;
@@ -246,7 +276,7 @@ button:hover {
 }
 
 .infographic-item {
-  background-color: #eaf7ff; /* Light blue for infographic cards */
+  background-color: #eaf7ff; 
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

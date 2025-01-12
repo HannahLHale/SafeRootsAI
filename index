@@ -25,7 +25,17 @@
       <p>Your journey to secure digital roots starts here. 🌟</p>
     </section>
     <section id="mission">
-      <h2>What is SafeRootsAI?</h2>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+    </style>
+<body>
+    <div class="wrapper four">
+        <div class="type">
+            <h2 class="typing">What is SafeRootsAI?</h2>
+        </div>
+    </div>
+</body>
+
       <p>Ever thought passwords were just... too boring to think about? Well, SafeRoots AI is here to change that! We're an AI-powered password Generator with a mission:</p>
       <li>Keep your online world safe and secure.</li>
       <li>Teach you (and your community) how to outsmart cyber-baddies.</li>
