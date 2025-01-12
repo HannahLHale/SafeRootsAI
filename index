@@ -62,7 +62,8 @@
 <section id="interactive-game" style="display: none;">
   <div class="game-container">
     <h2>🛡️ Password Hero: Save the Vault!</h2>
-    <p id="task">🧩 Strengthen this password: <span id="weak-password" class="highlight">dog1234</span></p>
+    <p> ⚠️Uh oh! A user's information is at risk because their password to their digital vault was easily guessed by a scary hacker!⚠️</p>
+    <p id="task">🧩 Based on what you've learned, hurry and secure the vault by strengthening their weak password: <span id="weak-password" class="highlight">dog1234</span></p>
     <input type="text" id="user-password" placeholder="Type your fix here">
     <button onclick="checkPassword()">🚀 Submit</button>
 
@@ -70,7 +71,7 @@
       <div id="strength-bar"></div>
     </div>
     <p id="feedback"></p>
-    <p id="encouragement" style="display: none;">🌟 Great job! You're on your way to becoming a Password Hero!</p>
+    <p id="encouragement" style="display: none;">🌟 Great job! The user's information is secure. You're on your way to becoming a Password Hero!</p>
   </div>
 </section>
 
