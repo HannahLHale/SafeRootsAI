@@ -21,6 +21,7 @@ body {
   align-items: center;
 }
 .wrapper.four {
+    text-align: center;
     font-size: 20px;
     font-family: "Lexend", sans-serif;
 }
