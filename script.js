@@ -2,10 +2,10 @@ function checkPasswordStrength() {
   const password = document.getElementById("password-input").value;
   const resultDiv = document.getElementById("strength-result");
 
-  // Clear previous result
+
   resultDiv.innerHTML = "";
 
-  // Check password strength
+  
   let score = 0;
   let tips = [];
 
@@ -54,42 +54,41 @@ function checkPasswordStrength() {
     resultDiv.innerHTML = `<span style="color: red;">🔴 Weak Password! Consider these tips:</span><ul>${tips.map(tip => `<li>${tip}</li>`).join('')}</ul>`;
   }
 }
-// Function to generate a strong password
 function generateStrongPassword() {
-    const length = 16; // Minimum password length
+    const length = 16; 
     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
     const numbers = "0123456789";
     const specialChars = "!@#$%^&*()-_=+[]{}|;:,.<>?/";
 
-    // Combine all characters into a pool
+    
     const allChars = uppercaseChars + lowercaseChars + numbers + specialChars;
 
-    // Helper function to get a random character from a string
+    
     function getRandomChar(charSet) {
         return charSet[Math.floor(Math.random() * charSet.length)];
     }
 
     let password = "";
 
-    // Ensure the password contains at least one character from each category
+    
     password += getRandomChar(uppercaseChars);
     password += getRandomChar(lowercaseChars);
     password += getRandomChar(numbers);
     password += getRandomChar(specialChars);
 
-    // Fill the remaining characters with random characters from all categories
+    
     for (let i = password.length; i < length; i++) {
         password += getRandomChar(allChars);
     }
 
-    // Shuffle the password to randomize the order of characters
+    
     password = password.split("").sort(() => Math.random() - 0.5).join("");
 
     return password;
 }
 
-// Function to display the generated password in the UI
+
 function generatePassword() {
     const password = generateStrongPassword();
     const passwordDisplay = document.getElementById("generated-password");
@@ -127,7 +126,6 @@ function checkPassword() {
   if (/[0-9]/.test(userPassword)) score += 1; // Numbers
   if (/[!@#$%^&*]/.test(userPassword)) score += 1; // Symbols
 
- 
   if (score === 4) {
     feedback.textContent = "🌟 Strong password! The user's information is secure. You're a Password Hero!🌟";
     feedback.style.color = "green";
@@ -137,8 +135,6 @@ function checkPassword() {
     feedback.style.color = "red";
     encouragement.style.display = "none"; 
   }
-
- 
   strengthBar.style.width = (score / 4) * 100 + "%";
   strengthBar.style.backgroundColor = score === 4 ? "green" : "orange";
 }

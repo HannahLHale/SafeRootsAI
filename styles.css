@@ -13,16 +13,16 @@ body {
 }
 .navbar {
     text-align: center;
-    background-color: #3a6d4f; /* Dark green background */
+    background-color: #3a6d4f; 
     color: white;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: none; /* Remove any borders */
-    box-shadow: none; /* Remove any potential shadows */
-    margin: 0; /* Remove any external spacing */
-    outline: none; /* Remove any outlines */
+    border: none; 
+    box-shadow: none;
+    margin: 0; 
+    outline: none; 
 }
 .wrapper.four {
     text-align: center;
