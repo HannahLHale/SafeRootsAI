@@ -54,33 +54,46 @@ function checkPasswordStrength() {
     resultDiv.innerHTML = `<span style="color: red;">🔴 Weak Password! Consider these tips:</span><ul>${tips.map(tip => `<li>${tip}</li>`).join('')}</ul>`;
   }
 }
+// Function to generate a strong password
+function generateStrongPassword() {
+    const length = 16; // Minimum password length
+    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const specialChars = "!@#$%^&*()-_=+[]{}|;:,.<>?/";
+
+    // Combine all characters into a pool
+    const allChars = uppercaseChars + lowercaseChars + numbers + specialChars;
+
+    // Helper function to get a random character from a string
+    function getRandomChar(charSet) {
+        return charSet[Math.floor(Math.random() * charSet.length)];
+    }
+
+    let password = "";
+
+    // Ensure the password contains at least one character from each category
+    password += getRandomChar(uppercaseChars);
+    password += getRandomChar(lowercaseChars);
+    password += getRandomChar(numbers);
+    password += getRandomChar(specialChars);
+
+    // Fill the remaining characters with random characters from all categories
+    for (let i = password.length; i < length; i++) {
+        password += getRandomChar(allChars);
+    }
+
+    // Shuffle the password to randomize the order of characters
+    password = password.split("").sort(() => Math.random() - 0.5).join("");
+
+    return password;
+}
+
+// Function to display the generated password in the UI
 function generatePassword() {
-  const length = 16; // Ensure consistent length
-  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}<>?-/|";
-  let passwordArray = []; // Use an array to collect characters
-
-  // Generate the password
-  for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * charset.length);
-    passwordArray.push(charset[randomIndex]);
-  }
-
-  const password = passwordArray.join(''); // Join characters into a string
-  
-  // Verify the password length before updating the DOM
-  if (password.length !== length) {
-    console.error("Error: Generated password length mismatch.");
-    return;
-  }
-
-  // Output the password
-  const passwordDiv = document.getElementById("generated-password");
-  if (passwordDiv) {
-    passwordDiv.innerHTML = `<span style="color: green;">An Example of a Strong Password: </span> 
-      <code id="password-text">${password}</code>`;
-  } else {
-    console.error("Error: Element with ID 'generated-password' not found.");
-  }
+    const password = generateStrongPassword();
+    const passwordDisplay = document.getElementById("generated-password");
+    passwordDisplay.textContent = password;
 }
 
 
@@ -125,7 +138,7 @@ function checkPassword() {
     encouragement.style.display = "none"; 
   }
 
-  // Update strength bar
+ 
   strengthBar.style.width = (score / 4) * 100 + "%";
   strengthBar.style.backgroundColor = score === 4 ? "green" : "orange";
 }
