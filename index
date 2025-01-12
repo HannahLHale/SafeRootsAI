@@ -96,6 +96,14 @@
         <h3>🖥️ Keep Software Updated</h3>
         <p>Install updates regularly to patch security vulnerabilities.</p>
       </div>
+      <div class="infographic-item">
+        <h3>📱Don't Post Personal Information Online</h3>
+        <p>Avoid posting any content online that reveals any of your personal information.</p>
+      </div>
+      <div class="infographic-item">
+        <h3>🗄️Create Backups</h3>
+        <p>Backup data on your devices frequently.</p>
+      </div>
     </div>
   </div>
 </section>
