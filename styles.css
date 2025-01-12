@@ -12,13 +12,17 @@ body {
     background-repeat: no-repeat;
 }
 .navbar {
-  text-align: center;
-  background-color: #3a6d4f;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    text-align: center;
+    background-color: #3a6d4f; /* Dark green background */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none; /* Remove any borders */
+    box-shadow: none; /* Remove any potential shadows */
+    margin: 0; /* Remove any external spacing */
+    outline: none; /* Remove any outlines */
 }
 .wrapper.four {
     text-align: center;
