@@ -50,12 +50,11 @@
   <p>Generate an AI-crafted password that is tough to crack to keep your roots secure!</p>
   <button onclick="generatePassword()">Generate Password!</button>
   <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
-  <button id="copy-button" style="display: none; margin-top: 10px;" onclick="copyPassword()">Copy to Clipboard</button>
 </section>
 
 <section id="learn">
   <h2>📚 Learn Cybersecurity</h2>
-  <p>Apply what you've learned in a fun mini game and learn some tips and tricks for staying safe online.</p>
+  <p>Apply what you've learned in a fun mini-game and learn some tips and tricks for staying safe online.</p>
   <button id="learn-button" onclick="showGame()">Start Learning</button>
 </section>
 
@@ -71,7 +70,7 @@
       <div id="strength-bar"></div>
     </div>
     <p id="feedback"></p>
-    <p id="encouragement" style="display: none;">🌟 Great job! The user's information is secure. You're on your way to becoming a Password Hero!</p>
+    <p id="encouragement" style="display: none;">🏆🏆🏆</p>
   </div>
 </section>
 
