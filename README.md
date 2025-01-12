@@ -17,12 +17,12 @@ Ever thought passwords were just... too boring to think about? Well, SafeRoots A
 
 🛠️ How to Get Started
 Prerequisites:
-Python 3.9+ installed.
-Basic knowledge of computers (but don’t worry, we’re here to help!).
+Basic knowledge of computers: Terminal (but don’t worry, we’re here to help!).
 
-1. Clone the following repository: git clone https://github.com/your-username/SafeRootsAI.git
-2. Head to the project directory by using: cd SafeRootsAI
-3. Now run it by using: python main.py
+1. Clone the following repository via terminal command: git clone https://github.com/your-username/SafeRootsAI.git
+2. Head to the project directory by locating 'SafeRootsAI' folder in your locally stored files on your laptop 
+3. Now open 'index' using your preferred browser
+4. You did it! Consider yourself: tech-savvy!
 
 🎉 Why SafeRoots?
 Cybersecurity can feel overwhelming, but it doesn’t have to be. SafeRoots AI isn’t just a tool—it’s your companion for growing safer digital habits. Whether you’re new to tech or a seasoned pro, we’re here to help you plant the seeds of secure online behavior.
