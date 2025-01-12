@@ -55,21 +55,34 @@ function checkPasswordStrength() {
   }
 }
 function generatePassword() {
-  const length = 16; 
+  const length = 16; // Ensure consistent length
   const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}<>?-/|";
-  let password = "";
+  let passwordArray = []; // Use an array to collect characters
 
+  // Generate the password
   for (let i = 0; i < length; i++) {
     const randomIndex = Math.floor(Math.random() * charset.length);
-    password += charset[randomIndex];
+    passwordArray.push(charset[randomIndex]);
   }
 
+  const password = passwordArray.join(''); // Join characters into a string
+  
+  // Verify the password length before updating the DOM
+  if (password.length !== length) {
+    console.error("Error: Generated password length mismatch.");
+    return;
+  }
+
+  // Output the password
   const passwordDiv = document.getElementById("generated-password");
   if (passwordDiv) {
     passwordDiv.innerHTML = `<span style="color: green;">An Example of a Strong Password: </span> 
       <code id="password-text">${password}</code>`;
-  } 
+  } else {
+    console.error("Error: Element with ID 'generated-password' not found.");
+  }
 }
+
 
 function showGame() {
   const learnSection = document.getElementById("learn");
