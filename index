@@ -16,8 +16,7 @@
   </header>
 <main>
     <section id="welcome">
-      <h1>Welcome to SafeRoots AI!</h1>
-      <p>Your journey to secure digital roots starts here. 🌟</p>
+      <h1><em>Your journey to secure digital roots starts here!🌟</em> </h1>
     </section>
     <section id="mission">
     <style>
@@ -26,12 +25,14 @@
 <body>
     <div class="wrapper four">
         <div class="type">
-            <h2 class="typing">What is SafeRootsAI?</h2>
+            <h2 class="typing">What is SafeRootsAI?</h2><img src="tractor.gif" width="150" height="100">
         </div>
     </div>
 </body>
 
-      <p>Ever thought passwords were just... too boring to think about? Well, SafeRoots AI is here to change that! We're an AI-powered password Generator with a mission:</p>
+      <p><b>Ever thought passwords were just... too boring to think about?</b></p>
+      <h1><b><u> Well, SafeRootsAI is here to change that!</h1></u></b></p>
+      <h3><b> We're an AI-powered password tester and generator with a mission: </b></h3></p>
       <li>Keep your online world safe and secure.</li>
       <li>Teach you (and your community) how to outsmart cyber-baddies.</li>
       <li>Bridge the digital divide with tools anyone can use. </li>
@@ -47,8 +48,8 @@
     </section>
    <section id="password-generator">
   <h2>🔑 Generate a Password</h2>
-  <p>Generate an AI-crafted password that is tough to crack to keep your roots secure!</p>
-  <button onclick="generatePassword()">Generate Password!</button>
+  <p>Generate an AI-crafted example password that is tough to crack to keep your roots secure!</p>
+  <button onclick="generatePassword()">Generate Password</button>
   <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
 </section>
 
@@ -100,7 +101,7 @@
 </section>
   </main>
   <footer>
-    <p>🌱 SafeRoots AI | Building a safer digital world. 💚</p>
+    <p>🌱 SafeRoots AI🌱 | Building a safer digital world💚 </p>
   </footer>
 </body>
 </html>
