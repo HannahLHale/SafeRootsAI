@@ -45,7 +45,7 @@ function checkPasswordStrength() {
     tips.push("Avoid common passwords or patterns.");
   }
 
-  // Display strength result
+
   if (score === 6) {
     resultDiv.innerHTML = `<span style="color: green;">✅ Strong Password! Great job! 🌟</span>`;
   } else if (score >= 4) {
@@ -55,8 +55,8 @@ function checkPasswordStrength() {
   }
 }
 function generatePassword() {
-  const length = 16; // Desired password length
-  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}<>?";
+  const length = 17; 
+  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}<>?-/|";
   let password = "";
 
   for (let i = 0; i < length; i++) {
@@ -65,7 +65,7 @@ function generatePassword() {
   }
 
   const passwordDiv = document.getElementById("generated-password");
-  passwordDiv.innerHTML = `<span style="color: green;">Your Strong Password: </span> <code id="password-text">${password}</code>`;
+  passwordDiv.innerHTML = `<span style="color: green;">An Example of a Strong Password: </span> <code id="password-text">${password}</code>`;
 }
 
 function showGame() {
@@ -102,11 +102,11 @@ function checkPassword() {
   if (score === 4) {
     feedback.textContent = "🌟 Strong password! The user's information is secure. You're a Password Hero!🌟";
     feedback.style.color = "green";
-    encouragement.style.display = "block"; // Show encouragement
+    encouragement.style.display = "block"; 
   } else {
     feedback.textContent = "❌ Keep improving! Add more security elements.";
     feedback.style.color = "red";
-    encouragement.style.display = "none"; // Hide encouragement
+    encouragement.style.display = "none"; 
   }
 
   // Update strength bar
