@@ -1,33 +1,27 @@
-const crypto = require('crypto');
-const fetch = require('node-fetch');
+async function checkBreach() {
+    const password = document.getElementById('breach-password').value;
+    const resultDiv = document.getElementById('breach-result');
 
-async function checkPasswordBreach(password) {
-    // Step 1: Hash the password with SHA-1
-    const sha1Hash = crypto.createHash('sha1').update(password).digest('hex').toUpperCase();
-    const prefix = sha1Hash.slice(0, 5);
-    const suffix = sha1Hash.slice(5);
-
-    // Step 2: Query the HIBP API
-    const response = await fetch(`https://api.pwnedpasswords.com/range/${prefix}`);
-    if (!response.ok) {
-        return `Error: Unable to connect to HIBP API. Status code: ${response.status}`;
+    if (!password) {
+        resultDiv.textContent = "Please enter a password.";
+        return;
     }
 
-    const data = await response.text();
+    try {
+        const response = await fetch('http://localhost:3000/check-breach', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ password }),
+        });
 
-    // Step 3: Check if the suffix exists in the response
-    const breaches = data.split('\n').map(line => line.split(':'));
-    for (const [hashSuffix, count] of breaches) {
-        if (hashSuffix === suffix) {
-            return `Your password has been exposed ${count} times in data breaches! Please change it.`;
-        }
+        const result = await response.text();
+        resultDiv.textContent = result;
+    } catch (error) {
+        resultDiv.textContent = "Error checking password. Please try again.";
+        console.error(error);
     }
-
-    return "Your password is safe and has not been found in any known data breaches.";
 }
 
-// Example Usage
-checkPasswordBreach("123456").then(console.log);
 
 function checkPasswordStrength() {
   const password = document.getElementById("password-input").value;
