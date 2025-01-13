@@ -10,6 +10,9 @@ const PORT = 3000;
 
 app.use(cors()); // Enable CORS
 app.use(bodyParser.json());
+app.use(cors({
+    origin: "*", // Allow requests from all origins
+}));
 
 // HTTP endpoint for checking password breach
 app.post("/check-breach", async (req, res) => {
