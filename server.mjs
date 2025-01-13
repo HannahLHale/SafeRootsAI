@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 // Default route to serve "index.html" from the "public" directory
 app.get("/", (req, res) => {
-    res.sendFile("index", { root: "public" });
+    res.sendFile("index.html", { root: "public" });
 });
 
 // HTTP endpoint for checking password breach
