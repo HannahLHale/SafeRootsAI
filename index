@@ -75,7 +75,7 @@
     <p> ⚠️Uh oh! A user's information is at risk because their password to their digital vault was easily guessed by a scary hacker!⚠️</p>
     <p id="task">🧩 Based on what you've learned, hurry and secure the vault by strengthening their weak password: <span id="weak-password" class="highlight">dog1234</span></p>
     <input type="text" id="user-password" placeholder="Type your fix here">
-    <button onclick="checkPassword()">🚀 Submit</button>
+    <button onclick="checkPassword()">🚀 <b>Submit</b></button>
 
     <div id="strength-bar-container">
       <div id="strength-bar"></div>
