@@ -46,20 +46,21 @@
         <button onclick="checkPasswordStrength()"><b>Test Strength</b></button>
         <div id="strength-result"></div>
     </section>
-    <section id="breachTest">
+
+  <section id="breachTest">
     <h2>🔍 Check for Breaches</h2>
     <p>Enter a password to see if it has been exposed in a data breach.</p>
     <input type="password" id="breach-password" placeholder="Enter password">
-    <button id="breachTest-button" onclick="checkBreach()">Check</button>
+    <button id="breachTest-button" onclick="checkBreach()"><b>Check</b></button>
     <p id="breach-result"></p>
-</section>
+  </section>
 
-   <section id="password-generator">
-  <h2>🔑 Generate a Password</h2>
-  <p>Generate an AI-crafted example password that is tough to crack to keep your roots secure!</p>
-  <button onclick="generatePassword()"><b>Generate Password</b></button>
-  <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
-</section>
+  <section id="password-generator">
+    <h2>🔑 Generate a Password</h2>
+    <p>Generate an AI-crafted example password that is tough to crack to keep your roots secure!</p>
+    <button onclick="generatePassword()"><b>Generate Password</b></button>
+    <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
+  </section>
 
 <section id="learn">
   <h2>📚 Learn Cybersecurity</h2>

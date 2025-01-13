@@ -120,6 +120,17 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#breachTest input {
+   padding: 0.5rem;
+  width: 60%;
+  font-size: 1rem;
+  margin-bottom: 1rem ;
+  margin-right:1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
 #breachTest button {
   background-color: #3a6d4f;
   color: white;
@@ -132,6 +143,12 @@ main {
 
 #breachTest button:hover {
   background-color: #2c513b;
+}
+
+#breach-result {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 #password-generator{
@@ -201,7 +218,7 @@ main {
 .game-container {
   text-align: center;
   padding: 2rem;
-  background-color: #eaf7ff; /* Light, cheerful background */
+  background-color: #eaf7ff; 
   border-radius: 15px;
   margin: 2rem auto;
   width: 80%;
