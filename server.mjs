@@ -8,13 +8,10 @@ import cors from "cors";
 const app = express();
 const PORT = 3000;
 
-app.use(cors()); // Enable CORS
+// Enable CORS
+app.use(cors());
 app.use(bodyParser.json());
-app.use(cors({
-    origin: "*", // Allow requests from all origins
-}));
 
-// HTTP endpoint for checking password breach
 app.post("/check-breach", async (req, res) => {
     const { password } = req.body;
 
@@ -43,21 +40,17 @@ app.post("/check-breach", async (req, res) => {
     }
 });
 
-// Create the HTTP server and WebSocket server on the same port
 const server = app.listen(PORT, () => {
     console.log(`HTTP Server running on http://localhost:${PORT}`);
 });
 
-// Create a WebSocket server on the same HTTP server
 const wss = new WebSocketServer({ server });
 
 wss.on("connection", (ws) => {
     console.log("Client connected via WebSocket");
 
-    // Send a message to the client
     ws.send("Hello, WebSocket client!");
 
-    // Listen for messages from the client
     ws.on("message", (message) => {
         console.log("Received:", message);
     });
