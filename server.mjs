@@ -3,15 +3,19 @@ import bodyParser from "body-parser";
 import crypto from "crypto";
 import fetch from "node-fetch";
 import { WebSocketServer } from "ws";
-import cors from "cors";
+import path from "path";
 
 const app = express();
 const PORT = 3000;
 
-// Enable CORS
-app.use(cors());
+// Use body parser for JSON payloads
 app.use(bodyParser.json());
 
+// Serve static files (e.g., your HTML, CSS, JS) from the "public" directory
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "public")));
+
+// HTTP endpoint for checking password breach
 app.post("/check-breach", async (req, res) => {
     const { password } = req.body;
 
@@ -40,17 +44,21 @@ app.post("/check-breach", async (req, res) => {
     }
 });
 
+// Create the HTTP server
 const server = app.listen(PORT, () => {
     console.log(`HTTP Server running on http://localhost:${PORT}`);
 });
 
+// WebSocket server setup (optional)
 const wss = new WebSocketServer({ server });
 
 wss.on("connection", (ws) => {
     console.log("Client connected via WebSocket");
 
+    // Send a message to the client
     ws.send("Hello, WebSocket client!");
 
+    // Listen for messages from the client
     ws.on("message", (message) => {
         console.log("Received:", message);
     });
