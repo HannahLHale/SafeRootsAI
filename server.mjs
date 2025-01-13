@@ -3,17 +3,20 @@ import bodyParser from "body-parser";
 import crypto from "crypto";
 import fetch from "node-fetch";
 import { WebSocketServer } from "ws";
-import path from "path";
 
 const app = express();
 const PORT = 3000;
 
-// Use body parser for JSON payloads
+// Middleware
 app.use(bodyParser.json());
 
-// Serve static files (e.g., your HTML, CSS, JS) from the "public" directory
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "public")));
+// Serve static files from the "public" directory
+app.use(express.static("public"));
+
+// Default route to serve "index.html" from the "public" directory
+app.get("/", (req, res) => {
+    res.sendFile("index.html", { root: "public" });
+});
 
 // HTTP endpoint for checking password breach
 app.post("/check-breach", async (req, res) => {
@@ -44,12 +47,11 @@ app.post("/check-breach", async (req, res) => {
     }
 });
 
-// Create the HTTP server
+// Create WebSocket server
 const server = app.listen(PORT, () => {
-    console.log(`HTTP Server running on http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
 
-// WebSocket server setup (optional)
 const wss = new WebSocketServer({ server });
 
 wss.on("connection", (ws) => {
