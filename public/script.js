@@ -2,11 +2,11 @@ function toggleCheck(iconElement, sectionId) {
     const isChecked = iconElement.dataset.checked === "true";
 
     if (isChecked) {
-        iconElement.src = "./public/grey-check.png"; 
+        iconElement.src = "grey-check.png"; 
         iconElement.alt = "Check off";
         iconElement.dataset.checked = "false"; 
     } else {
-        iconElement.src = "./public/green-check.png"; 
+        iconElement.src = "green-check.png"; 
         iconElement.alt = "Checked off";
         iconElement.dataset.checked = "true"; 
     }
