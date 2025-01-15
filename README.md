@@ -15,14 +15,16 @@ Ever thought passwords were just... too boring to think about? Well, SafeRoots A
 📚 Cyber Education: Learn why security matters and how to stay protected online.
 🤝 User-Friendly Design: Built for everyone, tech-savvy or not!
 
-🛠️ How to Get Started
-Prerequisites:
-Basic knowledge of computers: Terminal (but don’t worry, we’re here to help!).
+🛠️ How to Get Started:
+Prerequisites
+    Basic knowledge of computers: Terminal (but don’t worry, we’re here to help!).
 
-1. Clone the following repository via terminal command: git clone https://github.com/your-username/SafeRootsAI.git
-2. Head to the project directory by locating 'SafeRootsAI' folder in your locally stored files on your laptop 
-3. Now open 'index' using your preferred browser
-4. You did it! Consider yourself: tech-savvy!
+1. Clone the following repository by typing the following command into your Terminal (If you're unfamiliar with how to access your terminal, you can find this by going to your computer's search and just typing in 'Terminal'): git clone https://github.com/your-username/SafeRootsAI.git
+2. After typing in the clone command, change your directory to the SafeRootsAI directory by typing: cd SafeRootsAI
+3. You're doing great! Now type this command to install any dependencies needed to run SafeRootsAI : npm install
+4. Now, let's get the server up and running by typing in the following command: node server.mjs
+5. You should see the following response "Server running on http://localhost:3000"
+6. Click that link and enjoy SafeRootsAI!
 
 🎉 Why SafeRoots?
 Cybersecurity can feel overwhelming, but it doesn’t have to be. SafeRoots AI isn’t just a tool—it’s your companion for growing safer digital habits. Whether you’re new to tech or a seasoned pro, we’re here to help you plant the seeds of secure online behavior.
