@@ -38,7 +38,9 @@
       <li>Bridge the digital divide with tools anyone can use. </li>
       <li> With AI-crafted password suggestions, we’re making cybersecurity accessible, especially for those who need it most—our rural communities. 🌍✨</p> </li>
     </section>
-
+<section id="checkMessage" class="boxed-section"> 
+  <h1><b>❗Be sure to click the checkmark in the corner of each box for a surprise at the end❗</b></h1>
+</section>
     <section id="strength-tester" class="boxed-section">
         <h2>🔍 Test Your Password Strength</h2>
         <p>Enter a potential sample password that follows your usual password practices below. We'll tell you how strong it is! </p>
@@ -46,7 +48,7 @@
         <button onclick="checkPasswordStrength()"><b>Test Strength</b></button>
         <div id="strength-result"></div>
         <div class="check-container">
-      <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'strength-tester')" />
+           <img src="/public/grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'strength-tester')" data-checked="false" />
       </div>
     </section>
 
@@ -57,7 +59,7 @@
     <button id="breachTest-button" onclick="checkBreach()"><b>Check</b></button>
     <p id="breach-result"></p>
     <div class="check-container">
-    <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'breachTest')" />
+      <img src="/public/grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'breachTest')" data-checked="false" />
     </div>
   </section>
 
@@ -67,7 +69,7 @@
     <button onclick="generatePassword()"><b>Generate Password</b></button>
     <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
     <div class="check-container">
-    <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'password-generator')" />
+      <img src="/public/grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'password-generator')" data-checked="false" />
     </div>
   </section>
 
@@ -92,7 +94,7 @@
     <p id="feedback"></p>
     <p id="encouragement" style="display: none;"> <img src="giphySuperhero.gif" width="190" height="150"></p>
     <div class="check-container">
-    <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'interactive-game')" />
+      <img src="/public/grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'interactive-game')" data-checked="false" />
     </div>
   </div>
 </section>
@@ -126,10 +128,15 @@
         <p>Backup data on your devices frequently.</p>
       </div>
       <div class="check-container">
-    <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'infographic-area')" />
+        <img src="/public/grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'infographic-area')" data-checked="false" />
     </div>
     </div>
   </div>
+  <div id="certificate" style="display: none; text-align: center; margin-top: 2rem;">
+    <h2>🎓 Your Cybersecurity Certificate</h2>
+    <p>Congratulations on completing all sections and learning how to stay secure online!</p>
+    <img src="/public/CertifiedSafeRootsAI_cleanup.png" alt="Certificate" style="width: 50%;" />
+</div>
 
 </section>
   </main>

@@ -1,3 +1,42 @@
+function toggleCheck(iconElement, sectionId) {
+    // Get the current checked state
+    const isChecked = iconElement.dataset.checked === "true";
+
+    // Toggle the image and state
+    if (isChecked) {
+        iconElement.src = "/public/grey-check.png"; // Grey check for unchecked
+        iconElement.alt = "Check off";
+        iconElement.dataset.checked = "false"; // Mark as unchecked
+    } else {
+        iconElement.src = "/public/green-check.png"; // Blue check for checked
+        iconElement.alt = "Checked off";
+        iconElement.dataset.checked = "true"; // Mark as checked
+    }
+
+    // Check if all sections are completed
+    checkAllSectionsCompleted();
+}
+
+function checkAllSectionsCompleted() {
+    // Get all check icons
+    const icons = document.querySelectorAll(".check-icon");
+
+    // Check if all icons are marked as checked
+    const allChecked = Array.from(icons).every(icon => icon.dataset.checked === "true");
+
+    // If all sections are completed, display the certificate
+    if (allChecked) {
+        alert("🎉 Congratulations! You've completed all sections. Here's your certificate!");
+        displayCertificate();
+    }
+}
+
+function displayCertificate() {
+    const certificate = document.getElementById("certificate");
+    certificate.style.display = "block"; 
+}
+
+
 async function checkBreach() {
     const password = document.getElementById('breach-password').value;
     const resultDiv = document.getElementById('breach-result');
@@ -117,7 +156,7 @@ function generateStrongPassword() {
 function generatePassword() {
     const password = generateStrongPassword();
     const passwordDisplay = document.getElementById("generated-password");
-    passwordDisplay.textContent = password;
+    passwordDisplay.textContent = "Password: "+password ;
 }
 
 
