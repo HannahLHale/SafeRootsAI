@@ -1,30 +1,22 @@
 function toggleCheck(iconElement, sectionId) {
-    // Get the current checked state
     const isChecked = iconElement.dataset.checked === "true";
 
-    // Toggle the image and state
     if (isChecked) {
-        iconElement.src = "/public/grey-check.png"; // Grey check for unchecked
+        iconElement.src = "/public/grey-check.png"; 
         iconElement.alt = "Check off";
-        iconElement.dataset.checked = "false"; // Mark as unchecked
+        iconElement.dataset.checked = "false"; 
     } else {
-        iconElement.src = "/public/green-check.png"; // Blue check for checked
+        iconElement.src = "/public/green-check.png"; 
         iconElement.alt = "Checked off";
-        iconElement.dataset.checked = "true"; // Mark as checked
+        iconElement.dataset.checked = "true"; 
     }
-
-    // Check if all sections are completed
     checkAllSectionsCompleted();
 }
 
 function checkAllSectionsCompleted() {
-    // Get all check icons
     const icons = document.querySelectorAll(".check-icon");
-
-    // Check if all icons are marked as checked
     const allChecked = Array.from(icons).every(icon => icon.dataset.checked === "true");
 
-    // If all sections are completed, display the certificate
     if (allChecked) {
         alert("🎉 Congratulations! You've completed all sections. Here's your certificate!");
         displayCertificate();
@@ -185,10 +177,10 @@ function checkPassword() {
 
   let score = 0;
 
-  if (userPassword.length >= 12) score += 1; // Length
-  if (/[A-Z]/.test(userPassword)) score += 1; // Uppercase
-  if (/[0-9]/.test(userPassword)) score += 1; // Numbers
-  if (/[!@#$%^&*]/.test(userPassword)) score += 1; // Symbols
+  if (userPassword.length >= 12) score += 1; 
+  if (/[A-Z]/.test(userPassword)) score += 1; 
+  if (/[0-9]/.test(userPassword)) score += 1;
+  if (/[!@#$%^&*]/.test(userPassword)) score += 1;
 
   if (score === 4) {
     feedback.textContent = "🌟 Strong password! The user's information is secure. You're a Password Hero!🌟";
