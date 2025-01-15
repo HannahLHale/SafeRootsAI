@@ -39,36 +39,45 @@
       <li> With AI-crafted password suggestions, we’re making cybersecurity accessible, especially for those who need it most—our rural communities. 🌍✨</p> </li>
     </section>
 
-    <section id="strength-tester">
+    <section id="strength-tester" class="boxed-section">
         <h2>🔍 Test Your Password Strength</h2>
         <p>Enter a potential sample password that follows your usual password practices below. We'll tell you how strong it is! </p>
         <input type="password" id="password-input" placeholder="Your sample password..." />
         <button onclick="checkPasswordStrength()"><b>Test Strength</b></button>
         <div id="strength-result"></div>
+        <div class="check-container">
+      <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'strength-tester')" />
+      </div>
     </section>
 
-  <section id="breachTest">
+  <section id="breachTest" class="boxed-section">
     <h2>🔍 Check for Breaches</h2>
     <p>Enter a password to see if it has been exposed in a data breach.</p>
     <input type="password" id="breach-password" placeholder="Enter password">
     <button id="breachTest-button" onclick="checkBreach()"><b>Check</b></button>
     <p id="breach-result"></p>
+    <div class="check-container">
+    <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'breachTest')" />
+    </div>
   </section>
 
-  <section id="password-generator">
+  <section id="password-generator" class="boxed-section">
     <h2>🔑 Generate a Password</h2>
     <p>Generate an AI-crafted example password that is tough to crack to keep your roots secure!</p>
     <button onclick="generatePassword()"><b>Generate Password</b></button>
     <div id="generated-password" style="margin-top: 10px; font-size: 1.2rem; font-weight: bold;"></div>
+    <div class="check-container">
+    <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'password-generator')" />
+    </div>
   </section>
 
-<section id="learn">
+<section id="learn"">
   <h2>📚 Learn Cybersecurity</h2>
   <p>Apply what you've learned in a fun mini-game and learn some tips and tricks for staying safe online.</p>
   <button id="learn-button" onclick="showGame()"><b>Start Learning</b></button>
 </section>
 
-<section id="interactive-game" style="display: none;">
+<section id="interactive-game" style="display: none;" class="boxed-section">
   <div class="game-container">
     <h2>🛡️ Password Hero: Save the Vault!</h2>
      <img src="hacker.gif" width="150" height="120" style:"position:relative;">
@@ -82,10 +91,13 @@
     </div>
     <p id="feedback"></p>
     <p id="encouragement" style="display: none;"> <img src="giphySuperhero.gif" width="190" height="150"></p>
+    <div class="check-container">
+    <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'interactive-game')" />
+    </div>
   </div>
 </section>
 
-<section id="infographic-area" style="display: none;">
+<section id="infographic-area" style="display: none;" class="boxed-section">
   <div class="infographic-container">
     <h2>🔐 Cybersecurity Essentials</h2>
     <div class="infographic">
@@ -113,8 +125,12 @@
         <h3>🗄️Create Backups</h3>
         <p>Backup data on your devices frequently.</p>
       </div>
+      <div class="check-container">
+    <img src="public\grey-check.png" alt="Check off" class="check-icon" onclick="toggleCheck(this, 'infographic-area')" />
+    </div>
     </div>
   </div>
+
 </section>
   </main>
   <footer>
