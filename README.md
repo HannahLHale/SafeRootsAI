@@ -1,5 +1,5 @@
 🌱 SafeRootsAI 🌱
-Helping rural communities grow strong roots in cybersecurity!
+Helping all communities grow strong roots in cybersecurity!
 
 🚀 What is SafeRootsAI?
 Ever thought passwords were just... too boring to think about? Well, SafeRoots AI is here to change that! We're an AI-powered password manager with a mission:
