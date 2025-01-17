@@ -17,6 +17,8 @@ Ever thought passwords were just... too boring to think about? Well, SafeRoots A
 
 🛠️ How to Get Started:
 Prerequisites
+    Node.js installed
+    Git installed
     Basic knowledge of computers: Terminal (but don’t worry, we’re here to help!).
 
 1. Clone the following repository by typing the following command into your Terminal (If you're unfamiliar with how to access your terminal, you can find this by going to your computer's search and just typing in 'Terminal'): git clone https://github.com/your-username/SafeRootsAI.git
